@@ -1,0 +1,15 @@
+name: Forage Task Workflow
+
+on: [push]
+
+jobs:
+  verify-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Print Variable Value
+        run: echo "The variable value is ${{ vars.MY_VARIABLE }}"
+
+
